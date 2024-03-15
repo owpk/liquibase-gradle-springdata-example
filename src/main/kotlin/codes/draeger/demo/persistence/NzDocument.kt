@@ -2,16 +2,14 @@ package codes.draeger.demo.persistence
 
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.UUID
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.Table
+import javax.persistence.*
 
-@Entity(name = "example")
+@Entity
 @Table(name = "example")
-class ExampleEntity(
+class NzDocument(
     @Id
-    val id: String = UUID.randomUUID().toString(),
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long,
 
     @Column(name = "name", nullable = false, unique = true)
     var name: String,
@@ -22,4 +20,4 @@ class ExampleEntity(
 
 )
 
-interface ExampleRepository: JpaRepository<ExampleEntity, String>
+interface ExampleRepository: JpaRepository<NzDocument, String>

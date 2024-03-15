@@ -18,7 +18,7 @@ internal class WithoutLiquibaseTest(
 
     @BeforeEach
     internal fun setUp() {
-        exampleRepository.save(ExampleEntity(name = "chris", age = 34))
+        exampleRepository.save(NzDocument(name = "chris", age = 34))
     }
 
     @Test
@@ -37,7 +37,7 @@ internal class WithLiquibaseTest(
 
     @BeforeEach
     internal fun setUp() {
-        exampleRepository.save(ExampleEntity(name = "chris", age = 34))
+        exampleRepository.save(NzDocument(name = "chris", age = 34))
     }
 
     @Test
