@@ -28,7 +28,7 @@ open class TestContainer {
 }
 
 class CustomSQLContainer(
-    version: String = "12.4-alpine",
+    version: String = "14-alpine",
 ) : PostgreSQLContainer<CustomSQLContainer>(DockerImageName.parse("postgres:$version")) {
     init {
         withDatabaseName("testing")

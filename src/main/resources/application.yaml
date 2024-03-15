@@ -1,11 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/liquibase-demo
+    url: jdbc:postgresql://localhost:5451/playground_db
     driver-class-name: org.postgresql.Driver
-    username: liquibase-demo
-    password: liquibase-demo
+    username: postgres
+    password: postgres
   jpa:
-    hibernate.ddl-auto: validate
+    show-sql: true
+    properties.hibernate.format_sql: true
+    hibernate.ddl-auto: none
   liquibase:
     enabled: true
 
